@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Atividades Escolares</title>
+</head>
+<body>
+    <h1>Atividades Escolares</h1>
+
+    <nav>
+        <a href="#etapas">Etapas</a>
+        <a href="#atividades">Atividades</a>
+        <a href="#inscricao">Inscrição</a>
+    </nav>
+
+    <h2 id="etapas">Como participar</h2>
+
+    <ol>
+        <li>Conhecer as atividades escolares disponíveis.</li>
+        <li>Escolher a atividade de interesse.</li>
+        <li>Preencher e enviar o formulário de inscrição.</li>
+    </ol>
+
+    <p>As atividades escolares ajudam os estudantes a desenvolver novas habilidades.</p>
+
+    <p>A participação incentiva a criatividade e o trabalho em equipe.</p>
+
+    <p>Os alunos podem escolher atividades de acordo com seus interesses.</p>
+
+    <p>As atividades são realizadas em horários definidos pela escola.</p>
+
+    <p>Participe e aproveite as oportunidades de aprendizado oferecidas.</p>
+
+    <h2 id="atividades">Atividades disponíveis</h2>
+
+    <table border="1">
+        <tr>
+            <th>Atividade</th>
+            <th>Horário</th>
+        </tr>
+        <tr>
+            <td>Clube de Leitura</td>
+            <td>Segunda-feira, 14h</td>
+        </tr>
+        <tr>
+            <td>Oficina de Ciências</td>
+            <td>Quarta-feira, 15h</td>
+        </tr>
+        <tr>
+            <td>Prática Esportiva</td>
+            <td>Sexta-feira, 13h</td>
+        </tr>
+    </table>
+
+    <p>O Clube de Leitura estimula o hábito de ler e interpretar textos.</p>
+
+    <p>A Oficina de Ciências permite explorar conceitos científicos na prática.</p>
+
+    <p>A Prática Esportiva promove a saúde e a cooperação entre os alunos.</p>
+
+    <p>As vagas são limitadas e dependem da disponibilidade de cada atividade.</p>
+
+    <p>Consulte os horários antes de realizar sua inscrição.</p>
+
+    <h2 id="inscricao">Inscrição</h2>
+
+    <form action="https://httpbin.org/post" method="post">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <br><br>
+
+        <label for="atividade">Escolha uma atividade:</label>
+        <select id="atividade" name="atividade" required>
+            <option value="">Selecione uma atividade</option>
+            <option value="clube-de-leitura">Clube de Leitura</option>
+            <option value="oficina-de-ciencias">Oficina de Ciências</option>
+            <option value="pratica-esportiva">Prática Esportiva</option>
+        </select>
+
+        <br><br>
+
+        <button type="submit">Enviar inscrição</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,250 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Escolar</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f6f8;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #245b45;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+        }
+
+        nav {
+            background-color: #194332;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 25px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            background-color: white;
+            margin-bottom: 25px;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px #00000012;
+        }
+
+        h2 {
+            color: #245b45;
+            margin-top: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #245b45;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f0f5f2;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 11px;
+            margin-top: 5px;
+            border: 1px solid #bbb;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 12px 20px;
+            background-color: #245b45;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #194332;
+        }
+
+        footer {
+            background-color: #194332;
+            color: white;
+            text-align: center;
+            padding: 18px;
+        }
+
+        @media (max-width: 600px) {
+            nav a {
+                display: inline-block;
+                margin: 5px 8px;
+            }
+
+            section {
+                padding: 16px;
+            }
+
+            th, td {
+                padding: 8px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Biblioteca Escolar</h1>
+        <p>Conhecimento, leitura e imaginação!</p>
+    </header>
+
+    <nav>
+        <a href="#passos">Como solicitar</a>
+        <a href="#catalogo">Catálogo</a>
+        <a href="#solicitacao">Solicitação</a>
+    </nav>
+
+    <main>
+
+        <section>
+            <h2 id="passos">Como solicitar um livro</h2>
+
+            <p>Para solicitar um livro da biblioteca, siga estas etapas:</p>
+
+            <ol>
+                <li>Consulte o catálogo de livros disponíveis.</li>
+                <li>Escolha o livro que deseja ler.</li>
+                <li>Preencha o formulário de solicitação.</li>
+                <li>Escolha o prazo desejado.</li>
+                <li>Clique em "Enviar solicitação".</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2 id="catalogo">Catálogo de livros</h2>
+
+            <p>Confira alguns exemplos de livros disponíveis:</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Livro</th>
+                        <th>Autor</th>
+                        <th>Prazo</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>O Pequeno Príncipe</td>
+                        <td>Antoine de Saint-Exupéry</td>
+                        <td>7 dias</td>
+                    </tr>
+
+                    <tr>
+                        <td>Dom Casmurro</td>
+                        <td>Machado de Assis</td>
+                        <td>10 dias</td>
+                    </tr>
+
+                    <tr>
+                        <td>O Sítio do Picapau Amarelo</td>
+                        <td>Monteiro Lobato</td>
+                        <td>14 dias</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2 id="solicitacao">Solicitação de livro</h2>
+
+            <p>Preencha os campos abaixo com dados fictícios para testar o formulário.</p>
+
+            <form action="https://httpbin.org/post" method="post">
+
+                <label for="estudante">Nome do estudante:</label>
+                <input
+                    type="text"
+                    id="estudante"
+                    name="estudante"
+                    placeholder="Digite um nome fictício"
+                    required
+                >
+
+                <label for="livro">Escolha o livro:</label>
+                <select id="livro" name="livro" required>
+                    <option value="" selected disabled>Selecione um livro</option>
+                    <option>O Pequeno Príncipe</option>
+                    <option>Dom Casmurro</option>
+                    <option>O Sítio do Picapau Amarelo</option>
+                </select>
+
+                <label for="prazo">Prazo de empréstimo:</label>
+                <select id="prazo" name="prazo" required>
+                    <option value="" selected disabled>Selecione o prazo</option>
+                    <option>7 dias</option>
+                    <option>10 dias</option>
+                    <option>14 dias</option>
+                </select>
+
+                <button type="submit">Enviar solicitação</button>
+
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Biblioteca Escolar &copy; 2026</p>
+    </footer>
+
+</body>
+</html>
