@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inscrição do Evento Escolar 2026</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 24px;
+      background: #f8fafc;
+    }
+
+    form {
+      max-width: 480px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 26px;
+      border-radius: 14px;
+      box-shadow: 0 4px 18px rgba(0,0,0,.08);
+    }
+
+    h1 {
+      color: #0c4a6e;
+      font-size: 1.35rem;
+      margin-bottom: 18px;
+    }
+
+    label {
+      display: block;
+      font-weight: 700;
+      font-size: .86rem;
+      color: #334155;
+      margin-top: 14px;
+      margin-bottom: 6px;
+    }
+
+    input[type="text"],
+    input[type="email"] {
+      width: 100%;
+      padding: 10px 14px;
+      border: 2px solid #cbd5e1;
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: .94rem;
+      box-sizing: border-box;
+    }
+
+    fieldset {
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      margin-top: 18px;
+      padding: 12px;
+    }
+
+    legend {
+      font-weight: bold;
+      color: #0c4a6e;
+    }
+
+    .grupo {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-top: 6px;
+    }
+
+    .grupo label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 500;
+      background: #f8fafc;
+      border: 2px solid #e2e8f0;
+      padding: 8px 12px;
+      border-radius: 8px;
+      margin: 0;
+      cursor: pointer;
+    }
+
+    .grupo input {
+      accent-color: #0d9488;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 22px;
+      background: #0d9488;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #0f766e;
+    }
+  </style>
+</head>
+
+<body>
+  <form action="/inscricao" method="post">
+    <h1>Inscrição do Evento Escolar 2026</h1>
+
+    <!-- Missão 1: Campo de nome -->
+    <label for="nome">Nome completo</label>
+    <input type="text" id="nome" name="nome" required>
+
+    <!-- Missão 2: Campo de e-mail -->
+    <label for="email">E-mail</label>
+    <input type="email" id="email" name="email" required>
+
+    <!-- Missão 3: Escolha do turno -->
+    <label>Escolha o turno</label>
+    <div class="grupo">
+      <label>
+        <input type="radio" name="turno" value="manha" required>
+        Manhã
+      </label>
+
+      <label>
+        <input type="radio" name="turno" value="tarde">
+        Tarde
+      </label>
+
+      <label>
+        <input type="radio" name="turno" value="noite">
+        Noite
+      </label>
+    </div>
+
+    <!-- Missão 4: Confirmação de presença -->
+    <fieldset>
+      <legend>Confirma presença?</legend>
+
+      <div class="grupo">
+        <label>
+          <input type="radio" name="presenca" value="sim" required>
+          Sim, confirmo!
+        </label>
+
+        <label>
+          <input type="radio" name="presenca" value="nao">
+          Não poderei comparecer
+        </label>
+      </div>
+    </fieldset>
+
+    <!-- Missão 5: Envio do formulário -->
+    <button type="submit">Enviar inscrição</button>
+  </form>
+</body>
+</html>
